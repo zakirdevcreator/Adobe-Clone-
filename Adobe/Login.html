@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adobe Login</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      width: 100%;
+      background: linear-gradient(-45deg, #1e1e1e, #3a3a3a, #ff0000, #121212);
+      background-size: 400% 400%;
+      animation: gradientMove 10s ease infinite;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .login-box {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 40px 30px;
+      border-radius: 12px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+      width: 100%;
+      max-width: 400px;
+      animation: slideUp 1s ease-out;
+    }
+
+    .login-box h2 {
+      text-align: center;
+      color: #ff0000;
+      font-size: 32px;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+
+    .input-group {
+      margin-bottom: 20px;
+    }
+
+    .input-group input {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .input-group input:focus {
+      border-color: #ff0000;
+      outline: none;
+      box-shadow: 0 0 6px rgba(255, 0, 0, 0.4);
+    }
+
+    .login-btn {
+      width: 100%;
+      padding: 12px;
+      background-color: #ff0000;
+      color: white;
+      font-size: 16px;
+      font-weight: 600;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .login-btn:hover {
+      background-color: #e60000;
+    }
+
+    .social-login {
+      margin-top: 25px;
+    }
+
+    .social-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 15px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      background-color: #fff;
+    }
+
+    .social-btn img {
+      width: 20px;
+      margin-right: 10px;
+    }
+
+    .social-btn:hover {
+      background-color: #f0f0f0;
+    }
+
+    @keyframes slideUp {
+      from {
+        transform: translateY(50px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 480px) {
+      .login-box {
+        padding: 30px 20px;
+        max-width: 100%;
+      }
+
+      .login-box h2 {
+        font-size: 28px;
+      }
+
+      .social-btn {
+        font-size: 14px;
+      }
+    }
+
+    @media (min-width: 481px) and (max-width: 768px) {
+      .login-box {
+        padding: 35px 25px;
+        max-width: 350px;
+      }
+
+      .login-box h2 {
+        font-size: 30px;
+      }
+
+      .social-btn {
+        font-size: 15px;
+      }
+    }
+
+    @media (min-width: 769px) {
+      .login-box {
+        max-width: 400px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="login-box">
+    <h2>Adobe</h2>
+    <form id="loginForm">
+      <div class="input-group">
+        <input type="text" placeholder="Email or Username" id="email" required />
+      </div>
+      <div class="input-group">
+        <input type="password" placeholder="Password" id="password" required />
+      </div>
+      <button type="submit" class="login-btn">Login</button>
+    </form>
+
+    <div class="social-login">
+      <div class="social-btn">
+        <img src="google-logo.webp" alt="Google logo" />
+        Continue with Google
+      </div>
+      <div class="social-btn">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube logo" />
+        Continue with YouTube
+      </div>
+      <div class="social-btn">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple logo" />
+        Continue with Apple
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Handle form submission
+    const loginForm = document.getElementById('loginForm');
+
+    loginForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+
+      console.log('Email:', email);
+      console.log('Password:', password);
+
+      window.location.href = 'Min.html';  
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,872 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: sans-serif;
+}
+.Navigation-bar{
+    height: 65px;
+    width: 100%;
+    background-color:rgb(249, 246, 246);
+    display: flex;
+    padding: 0px 50px 0px 50px;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 999;
+}
+.Navigation-bar #logo{
+    height: 38px;
+}
+.Navigation-bar .types{
+    height: 100%;
+    width: 760px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.Navigation-bar .types .ul{
+    height: 100%;
+    width: 680px;
+    display: flex;
+}
+.Navigation-bar .types .ul li{
+    height: 100%;
+    width: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.Navigation-bar .types .ul li:hover{
+    background-color: rgb(241, 239, 239);
+}
+.Navigation-bar .types li a{
+    color: black;
+    text-decoration: none;
+    font-size: 13px;
+}
+.Navigation-bar .types li a i{
+    font-size: 11px;
+}
+.buttons{
+    height: 100%;
+    width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#toggle{
+    height: 35px;
+    width: 35px;
+    padding: 5px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(249, 246, 246);
+
+    img{
+        height: 60%;
+        width: 60%;
+    }
+}
+#toggle:hover{
+    background-color: rgb(221, 220, 220);
+}
+button{
+    cursor: pointer;
+}
+#sing{
+    height: 33px;
+    width: 78px;
+    border-radius: 50px;
+    border: 2px solid gainsboro;
+    background-color: rgb(249, 246, 246);
+    font-weight: 600;
+}
+#sing:hover{
+        background-color: rgb(212, 8, 212);
+        color: white;
+    }
+
+.Content{
+    width: 100%;
+    background-image: url(back.webp);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    padding-top: 65px;
+    justify-content: space-evenly;
+}
+#Bars{
+    height: 40px;
+    width: 40px;
+    border: none;
+    display: none;
+    border-radius: 5px;
+    font-size: 20px;
+    background-color: rgb(249, 246, 246);
+}
+#Bars:hover{
+background-color: rgb(223, 221, 221);
+}
+.Heading{
+    width: 100%;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    span{
+        font-size: 16px;
+    }
+    h1{
+        font-size: 38px;
+    }
+}
+.Heading .Buttons{
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 10px;
+}
+.Heading .Buttons #blue{
+    height: 45px;
+    width: 120px;
+    border: none;
+    border-radius: 50px;
+    background-color: rgb(72, 72, 237);
+    color: white;
+    font-weight: 600;
+    font-size: 17px;
+}
+.Heading .Buttons #blue:hover{
+    background-color: rgb(46, 46, 223);
+}
+.Heading .Buttons a{
+    color:black;
+}
+.ADOBE{
+ height: 500px;
+ width: 100%;
+ display: flex;
+ justify-content: space-evenly; 
+}
+.ADOBE .adop{
+    height: 500px;
+    background-color: rgba(255, 255, 255, 0.400);
+    backdrop-filter: blur(8px);
+    border: 2px solid white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+#Opeen{
+    top: 8%;
+    right: 8.5%;
+}
+@media screen and (min-width:0px) {
+    .Navigation-bar .types .ul{
+        display: none;
+    }
+    .Navigation-bar{
+        padding: 0px 10px 0px 20px;
+    }
+    .Navigation-bar .types{
+        width: 130px;
+    }
+    #Bars{
+        display: block;
+    }
+    .Content .Heading{
+        padding: 10px 50px 0px 50px;
+        align-items: start;
+        height: 350px;
+    }
+    .Content .Heading{
+        h1{
+            font-size: 32px;
+        }
+    }
+    .Content{
+        height: 1500px;
+    }
+    .Content .Heading .Buttons{
+        height: 90px;
+        flex-wrap: wrap;
+        justify-content: left;
+    }
+    .Content .Heading .Buttons #blue{
+        width: 100%;
+    }
+    .ADOBE{
+        flex-direction: column;
+        height: 1000px;
+        align-items: center;
+    }
+    .ADOBE .adop{
+        width: 90%;
+        height: 450px;
+    }
+    .Layer{
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        z-index:10000000;
+        visibility: visible;
+        display: none;
+    }
+    .Layer .opacity{
+        height:100%;
+        width:100%;
+        background-color: black;
+        justify-content: center;
+        opacity: 0.5;
+    }
+    #Open{
+        height: 480px;
+        width: 100%;
+        background-color:white;
+        display: flex;
+        flex-direction: column;
+        padding: 30px 20px 20px 20px;
+        bottom: 0px;
+        position: fixed;
+        justify-content: space-between;
+        h1{
+            font-size: 18px;
+        }
+    }
+    #Open .cards{
+        height: 320px;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    #Open .cards .card:hover{
+        background-color: rgb(223, 222, 222);
+    }
+    #Open .cards .card{
+        height: 100px;
+        width: 32%;
+        border-radius: 13px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        cursor: pointer;
+
+        p{
+            font-size: 13px;
+            text-align: center;
+        }
+    }
+    #Open .cards .card img{
+        height: 50px;
+        width: 50px;
+        border-radius: 20px;
+    }
+    #Open .links{
+        height: 70px;
+        width: 100%;
+        background-color: rgb(241, 241, 241);
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        align-items: center;
+        border-radius: 15px;
+    }
+    #Open .links .com{
+        height: 100%;
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        cursor: pointer;
+
+        a{
+            color: rgb(39, 38, 38);
+            font-size: 13px;
+            text-decoration: none;
+        }
+        i{
+            color: rgb(39, 38, 38);
+            font-size: 25px;
+        }
+    }
+    #Open .links .com:hover a{
+        text-decoration: underline;
+    }
+    .Black{
+        height: 100vh;
+        width: 100%;
+        background-color: black;
+        padding: 100px 20px 20px 20px;
+        position: fixed;
+        display: none;
+        flex-direction: column;
+        z-index: 99;
+    }
+    .Black li{
+        height: 60px;
+        width: 100%;
+        font-weight: bold;
+        border: 2px solid black;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        padding: 0px 10px 0px 10px;
+        align-items: center;
+        cursor: pointer;
+    }
+    .Black li:active{
+        background-color: rgb(66, 177, 220);
+    }
+    .New{
+        display: flex;
+    }
+    .Side-List{
+        display: none;
+    }
+    .Layer-js{
+        display: flex;
+    }
+    .Back-of-js{
+        display: none;
+    }
+    .Cards-Container{
+        height: 2920px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .Cards-Container .Card{
+        height: 450px;
+        width: 90%;
+        background-color:black;
+        display: flex;
+        border-radius: 20px;
+        flex-direction: column;
+        padding-top: 40px;
+        color: white;
+        position: relative;
+        align-items: center;
+        overflow: hidden;
+    }
+    .Cards-Container .Card .Title{
+        height: 180px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        position: absolute;
+        padding: 0px 20px 0px 20px;
+
+        span{
+            font-size: 15px;
+            font-weight: 600;
+        }
+        b{
+            font-size: 19px;
+        }
+        p{
+            font-size: 17px;
+        }
+        a{
+            font-size: 13px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    }
+    .Cards-Container .Card .Title a:hover{
+        text-decoration: underline;
+    }
+    .Cards-Container .Card img{
+        height: 100%;
+        width: 100%;
+        margin-top: auto;
+    }
+    .Cards-Container #Card-2 img{
+        height: 350px;
+        width: 320px;
+    }
+    .Cards-Container #Card-5 img{
+        height: 100%;
+        width: 380px;
+        margin-left: auto;
+    }
+    .Cards-Container #Card-1{
+        background-color: #ef3b8b;
+    }
+    .Cards-Container #Card-3,.Cards-Container #Card-6{
+        background-color:gainsboro;
+    }
+    .Cards-Container #Card-4{
+        background-color:red;
+    }
+    .Cards-Container #Card-5{
+        background-color:#8c63ff;
+    }
+    .Cards-Container #Card-3{
+        padding-top: 0px;
+        color: black;
+        justify-content: right;
+        div{
+            height: 180px;
+            padding: 40px 20px 10px 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            width: 100%;
+            color: white;
+            background: linear-gradient(125deg, rgba(237, 5, 41, 1) 0%, rgba(155, 0, 193, 1) 50%, rgba(91, 0, 198, 1) 100%);
+            b{
+                font-size: 20px;
+            }
+            a{
+                color: white;
+                text-decoration: none;
+                font-size: 13px;
+                font-weight: 600;
+            }
+        }
+
+        li{
+            height: 110px;
+            width: 100%;
+            padding: 0px 20px 0px 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            
+            b{
+                font-size: 20px;
+            }
+            a{
+                color:#262530;
+                text-decoration: none;
+                font-size: 13px;
+                font-weight: 600; 
+            }
+        }
+    }
+    .Cards-Container #Card-3 div a:hover{
+        text-decoration: underline;
+    }
+    .Cards-Container #Card-3 li a:hover{
+        text-decoration: underline;
+    }
+    .Cards-Container #Card-6{
+        padding: 0px;
+        h1{
+            height: 80px;
+            width: 100%;
+            background-color: #262530;
+            padding: 40px 20px 0px 20px; 
+            font-size: 15px;
+            align-items: center;
+        }
+
+        li{
+            height: 120px;
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 10px;
+            border-top: 1px solid #262530 ;
+
+            b,p{
+                font-size: 15px;
+                color: #262530;
+            }
+            a{
+                font-size: 13.5px;
+                color: #262530;
+                text-decoration: none;
+            }
+        }
+    }
+}
+.Cards-Container #Card-6 li a:hover{
+    text-decoration: underline;
+}
+
+.adop .Title{
+    height: 250px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    /* background-color: red; */
+    position: absolute;
+    color:darkslategrey;
+    padding: 40px 20px 0px 20px;
+
+    span{
+        font-size: 15px;
+        font-weight: 600;
+    }
+    b{
+        font-size: 19px;
+    }
+    p{
+        font-size: 17px;
+    }
+    a{
+        font-size: 13px;
+        color:rgb(8, 130, 179);
+        text-decoration: none;
+        font-weight: bold;
+    }
+    .Buttons{
+        height: 50px;
+        width: 100%;
+        /* background-color: yellow; */
+        display: flex;
+        align-items:center;
+        gap: 10px;
+    }
+    .Buttons button{
+        height: 40px;
+        width: 120px;
+        border: 1px solid rgb(31, 30, 30);
+        border-radius: 50px;
+        font-size: 14px;
+
+        font-weight: 600;
+        background-color: gainsboro;
+    }
+}
+.adop:hover .Title a{
+    text-decoration: underline;
+}
+.adop img{
+    height: 80%;
+    width: 100%;
+    margin-top: auto;
+}
+.adop:hover .Title .Buttons button{
+    background-color: #262530;
+    color: white;
+}
+.Footer-container{
+    height: 580px;
+    width: 100%;
+    background-color: rgb(240, 240, 240);
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+}
+.Footer-container li{
+    height: 44px;
+    width: 100%;
+    padding: 0px 44px 0px 32px;
+    border-bottom: 1px solid gainsboro;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    font-weight:600;
+    color: rgb(54, 52, 52);
+}
+.Footer-container .Links{
+    height: 120px;
+    width: 100%;
+    /* background-color: rebeccapurple; */
+   justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+.Footer-container .Links .Apps{
+    height: 35px;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    padding-left: 44px;
+    gap: 20px;
+    align-items: center;
+
+    p{
+        font-size: 13px;
+        gap: 8px;
+        display: flex;
+        color: gray;
+    }
+    p i{
+        font-size: 16px;
+    }
+
+    .Buttons{
+        height: 100%;
+        width: 150px;
+        /* background-color: yellow; */
+        display: flex;
+        justify-content: space-evenly;
+
+        button{
+            height: 25px;
+            width: 25px;
+            border-radius: 5px;
+            border: none;
+            color: white;
+            background-color: gainsboro;
+            font-size: 18px;
+        }
+    }
+    
+}
+.Footer-container .Links .Apps .Buttons button:hover{
+    background-color: #262530;
+}
+.Footer-container .Links p:hover{
+    color: blue;
+}
+.Footer-container .Write{
+    height: 50px;
+    width: 100%;
+    /* background-color: yellow; */
+    font-size: 12px;
+    color: gray;
+    line-height: 25px;
+    padding: 0px 44px 0px 44px;
+
+    a{
+        text-decoration: none;
+        color: #262530;
+    }
+}
+.Footer-container .Write a:hover{
+    color: blue;
+}
+
+@media screen and (min-width:600px) {
+    .Content{
+        height: 1000px;
+    }
+    .Content .Heading{
+        height: 280px;
+    }
+    .ADOBE{
+        height: 500px;
+        flex-direction: row;
+    }
+    .ADOBE .adop,.ADOBE .express{
+        height: 500px;
+        width: 45%;
+    }
+    .Content .Heading .Buttons{
+        height: 50px;
+    }
+    .Content .Heading .Buttons #blue{
+        width: 120px;
+    }
+    #Open{
+        width: 600px;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .Layer-js{
+        display: flex;
+    }
+    .Back-of-js{
+        display: none;
+    }
+    .Cards-Container{
+        height: 1700px;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .Cards-Container .Card{
+        width: 43%;
+        height: 500px;
+    }
+    .adop img{
+        height: 50%;
+    }
+    .adop .Title{
+        height: 280px;
+    }
+}
+@media screen and (min-width:900px) {
+    .Navigation-bar .types .ul{
+        display: flex;
+    }
+    #Bars{
+        display: none;
+    }
+    .Navigation-bar .types{
+        width: 760px;
+    }
+    .Navigation-bar{
+        padding: 0px 10px 0px 10px;
+    }
+    .Navigation-bar .types .ul #Box-1,
+    .Navigation-bar .types .ul #Box-2,
+    .Navigation-bar .types .ul #Box-4{
+        width: 150px;
+    }
+    .Layer{
+        display: none;
+    }
+    .Side-List{
+        height: 480px;
+        width: 386px;
+        background-color:white;
+        display: flex;
+        flex-direction: column;
+        padding: 30px 20px 20px 20px;
+        position: fixed;
+        z-index: 100000000;
+        justify-content: space-between;
+        border-radius: 10px;
+        box-shadow: 1px 1px 5px gainsboro;
+        display:none;
+        right: 8%;
+        top: 8%;
+        h1{
+            font-size: 18px;
+        }
+    }
+    .Side-List .cards{
+        height: 320px;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    .Side-List .cards .card:hover{
+        background-color: rgb(244, 244, 244);
+    }
+    .Side-List .cards .card{
+        height: 100px;
+        width: 32%;
+        border-radius: 13px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        cursor: pointer;
+
+        p{
+            font-size: 13px;
+            text-align: center;
+        }
+    }
+    .Side-List .cards .card img{
+        height: 50px;
+        width: 50px;
+        border-radius: 20px;
+    }
+    .Side-List .links{
+        height: 70px;
+        width: 100%;
+        background-color: rgb(241, 241, 241);
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        align-items: center;
+        border-radius: 15px;
+    }
+    .Side-List .links .com{
+        height: 100%;
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        cursor: pointer;
+
+        a{
+            color: rgb(39, 38, 38);
+            font-size: 13px;
+            text-decoration: none;
+        }
+        i{
+            color: rgb(39, 38, 38);
+            font-size: 25px;
+        }
+    }
+    .Side-List .links .com:hover a{
+        text-decoration: underline;
+    }
+    .Menu-of-Adobe{
+        display: flex;
+    }
+    .Black{
+        display: none;
+    }
+    .Cards-Container #Card-2 img{
+        height: 100%;
+        width: 100%;
+    }
+    .Cards-Container #Card-6 li{
+        height: 130px;
+       gap: 13px;
+    }
+    .adop img{
+        width: 90%;
+        height: 60%;
+    }
+    .adop .Title{
+        height: 230px;
+    }
+}
+@media screen and (min-width:1200px) {
+    .Content{
+        height: 983px;
+        
+    }
+    .Content .Heading{
+        padding-top: 70px;
+        align-items: center;
+        h1{
+            font-size: 38px;
+        }
+    }
+    .Content .Heading .Buttons{
+        width: 100%;
+        justify-content: center;
+    }
+    .ADOBE .adop{
+        width: 60%;
+    }
+    .ADOBE #Express{
+        width: 28%;
+    }
+    .ADOBE #Express{
+        height: 100%;
+    }
+    .adop img{
+        height: 72%;
+        width: 100%;
+    }
+    .Cards-Container{
+        height: 1175px;
+        padding: 0px 20px 0px 20px;
+    }
+    .Cards-Container .Card{
+        width: 30%;
+    }
+}
+@media screen and (min-width:1440px) {
+    .Navigation-bar{
+        padding: 0px 40px 0px 50px;
+    }
+}
